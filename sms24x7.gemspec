@@ -18,5 +18,5 @@ Gem::Specification.new do |gem|
   gem.add_dependency 'curb-fu'
   gem.add_dependency 'multi_json'
   
-  s.add_development_dependency 'rspec', '~> 2.7.0'
+  gem.add_development_dependency 'rspec', '~> 2.7.0'
 end
