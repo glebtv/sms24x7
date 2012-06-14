@@ -3,9 +3,9 @@ require File.dirname(__FILE__) + '/spec_helper'
 describe SmsApi do
   describe 'Testing sms24x7 api calls' do
     it 'sending SMS' do
-      email = 'your@email.com'
-      password = 'your_password'
-      phone = '79991234567' # your phone
+      email = ''
+      password = ''
+      phone = '' # your phone
 
       email.should match(/^([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})$/), 'We need your email'
       password.should_not eq(''), 'We need your password'
