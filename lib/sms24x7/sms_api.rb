@@ -1,5 +1,5 @@
 require 'curb-fu'
-require 'json/pure'
+require 'multi_json'
 
 module SmsApi
   SMS_HOST = 'api.sms24x7.ru'
@@ -37,7 +37,7 @@ module SmsApi
     end
     raise InterfaceError, 'cURL request failed' unless curl.success?
 
-    json = JSON.parse(curl.body)
+    json = MultiJson.load(curl.body)
     unless (response = json['response']) && (msg = response['msg']) && (error_code = msg['err_code'])
       raise InterfaceError, 'Empty some necessary data fields'
     end
